@@ -1,0 +1,95 @@
+
+＊OnWindowStateRestore
+\e
+
+＊OnInstallBegin
+：\s[5]注文した新しい道具が届いたみたいね。
+
+＊OnInstallComplete
+：\s[5]『（replace（バイト値,１）（Ｒ１）（バイト値,１）\（バイト値,１）\\）』ね。
+これで少しは効率がよくなると良いわね。
+
+＊OnInstallFailure
+：\s[3]あれ？\w3私が頼んだ物と違うわね……？\w9\w6
+：\s[15]おお、それは私が注文しといたヤツだ！\w9\w6
+：\s[4]私の名義を勝手に使わないでよ……。
+
+＊OnInstallRefuse
+：\s[2]これは「（replace（バイト値,１）（Ｒ０）（バイト値,１）\（バイト値,１）\\）」さん宛のじゃない。
+アリー、後で届けてあげて。
+：\s[13]ほんとに人使いが荒いな……。
+
+＊OnUpdateBegin
+：
+
+＊OnUpdateReady
+：\s[5]通販の注文が入ったわ！\w3準備しないと！\w9\w6
+
+＊OnUpdateComplete
+＞ネットワーク更新（Ｒ０）
+
+＊OnUpdateFailure
+＞ネットワーク更新（Ｒ０）
+
+＊ネットワーク更新none
+：
+
+＊ネットワーク更新changed
+：\s[5]準備完了っと。
+アリー、発送しといてね。
+：\s[18]はいはい。
+
+＊ネットワーク更新timeout
+：
+
+＊ネットワーク更新md5 miss
+：\s[4]あら？\w9\w6
+この注文先ちょっと変ね……？
+：(md5エラー)
+
+＊ネットワーク更新404
+：\s[4]注文先が存在しない住所になってるわ。
+イタズラかしら……。
+：(404)
+
+＊ネットワーク更新artificial
+：(中断します)
+
+＊OnUpdatedataCreating
+：\s[7]えーっと、発注リスト書かなきゃね。
+
+＊OnUpdatedataCreated
+：\s[32]よし、これで終わりっと。
+
+＊OnNarCreating
+：\s[6]ラッピングね、アリー任せたわ。
+：\s[25]任された！\w9\w6
+
+＊OnNarCreated
+\s[15]ん。出来たぞ！\w9\w6
+：\s[5]ついでにミツツボアリも入れておいたわ。
+
+＊OnKeyPress
+＞（Ｒ０）が押された
+
+＊rが押された
+＄辞書リロード	実行
+：(リロード)
+
+＊OnUserInput
+＞（Ｒ０）をタイムアウト	（compare（バイト値,１）（Ｒ１）（バイト値,１）timeout）
+＞（Ｒ０）を空打ちされた	（is_empty（バイト値,１）（Ｒ１））
+＄（Ｒ０）	（Ｒ１）
+＞（Ｒ０）を教えてもらった
+
+＊OnUserInputCancel
+＞（Ｒ０）を空打ちされた	（compare,（Ｒ１）,close）
+
+＊OnAnchorSelectEx
+＄選択ラベル	（Ｒ０）
+＄選択ＩＤ	（Ｒ１）
+＞（Ｒ１）
+
+＊OnAnchorSelect
+＄選択ＩＤ	（Ｒ０）
+＞（Ｒ０）
