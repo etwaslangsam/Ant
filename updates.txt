@@ -1,7 +1,7 @@
 file,.gitignore7ab2d3941f50aa40faa500d00a053368size=132
 file,delete.txt57b3b6b90d3e6aa046f4eb9a60e02970size=15
 file,developer_options.txt8a9c30d64242f71ba43eadc0a56d56c3size=408
-file,install.txt83f29ff6677a94c28a6f0e8a3c82d4d4size=91
+file,install.txt003425858846bfcfd44c6ca5ad8d1ddfsize=75
 file,readme.txtf602219c537ac6c9df7a1a99b880ae14size=890
 file,thumbnail.pnr79df05a8634dacd91c1fe4cb784d7bb1size=43568
 file,ghost/master/descript.txtdbd0e8de513437ae86c00d83f84943ebsize=693
