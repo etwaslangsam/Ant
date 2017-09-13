@@ -15,7 +15,6 @@ https://ja.wikipedia.org/wiki/%E3%83%81%E3%83%A7%E3%82%B3%E3%82%A2%E3%83%B3%E3%8
 ＃＊sakura.portalsites
 ＃-
 ＃「-」といれることでリンクメニューに罫線を引くことができます。 
-
 ＊sakura.portalsites
 SSPのバグ報告はこちら
 
@@ -32,6 +31,12 @@ http://ssp.shillest.net/
 ＊sakura.portalsites
 GHOST TOWN
 http://ghosttown.mikage.jp/
+
+
+＊sakura.portalsites
+ゴーストキャプターさくら
+http://buynowforsale.shillest.net/ghosts/
+
 
 ＊sakura.portalsites
 総合情報サイト
@@ -54,3 +59,10 @@ http://www.ghost.sakura.tv/index.html
 ＊sakura.portalsites
 ゴースト回覧板３ｒｄ
 http://jbbs.shitaraba.net/computer/44300/
+
+
+＊sakura.portalsites
+噂と評判[改] 過去ログ保管庫
+http://ghostreview.sakura.ne.jp/
+
+

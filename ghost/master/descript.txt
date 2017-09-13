@@ -4,6 +4,7 @@ type,ghost
 craftman,etwaslangsam
 craftmanw,–q–ìMŸ
 craftmanurl,http://ghosthacking.webcrow.jp/index.html
+homeurl,https://raw.githubusercontent.com/etwaslangsam/Ant/master/
 readme,readme.txt
 sakura.name,Œ¦‘ã
 kero.name,ƒAƒŠ[
@@ -24,8 +25,8 @@ don't need onmousemove,0
 don't need bind,0
 don't need seriko talk,0
 balloon.dontmove,False
-shiori,satori.dll
 icon,hp.ico
+shiori,satori.dll
 
 
 
