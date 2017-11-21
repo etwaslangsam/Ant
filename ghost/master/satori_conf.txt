@@ -14,6 +14,7 @@
 ＄自動挿入ウェイトタイプ	一般
 ＄売上	0
 ＄来店数	1
+＄時報フラグ	１
 ＠SAORI
 calc,saori/ssu.dll,calc
 calc_float,saori/ssu.dll,calc_float
