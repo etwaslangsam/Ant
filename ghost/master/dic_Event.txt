@@ -11,7 +11,7 @@
 ＃表情復帰
 ＃────────
 ＊OnSurfaceRestore
-\h（choice,\s[6],\s[7],\s[32]）\u（choice,\s[16],\s[20],\s[26]）
+\0（choice,\s[6],\s[7],\s[32]）\1（choice,\s[16],\s[20],\s[26]）
 
 ＃────────
 ＃シェル変更
@@ -144,10 +144,12 @@
 ＞（Reference1）
 ＞選択先なし
 
-＊OnAnchorSelect
-＄選択ＩＤ	（Reference0）
-＞（Reference0）
+＊OnChoiceSelectEx
+＄選択ラベル	（Reference0）
+＄選択ＩＤ	（Reference1）
+＞（Reference1）
 ＞選択先なし
+
 
 ＊選択先なし
 ：\s[8]あ、ごめんなさい。
