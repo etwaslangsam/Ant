@@ -1,5 +1,5 @@
 thumbnail.png
-ghost\master\dic_Menu.txt
 ghost\master\dic_Time.txt
 ghost\master\dic_buy.txt
 ghost\master\dic_Word.txt
+ghost\master\dic_String.txt
