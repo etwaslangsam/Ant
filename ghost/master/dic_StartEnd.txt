@@ -1,9 +1,6 @@
-＃────────
-＃起動と終了
-＃────────
 ＊OnSatoriLoad
-＄文「＊」の重複回避	有効、起動中
-＄単語群「＊」の重複回避	有効、起動中
+＄文「＊」の重複回避	直前、起動中
+＄単語群「＊」の重複回避	直前、トーク中
 ＄さくらスクリプトによるスコープ切り換え時	
 ＄自動挿入ウェイトタイプ	一般
 
@@ -208,18 +205,56 @@ https://www.amazon.co.jp/dp/4591071545/ref=cm_sw_r_tw_dp_U_x_eNzTBb87JDTNT
 ＃────────
 ＃■ポータルサイト
 ＃────────
-＠portalrootbutton.caption
+＊sakura.portalsites
 配布サイト
-
 
 ＊sakura.portalsites
 ほっとぺっぱぁ団
-http://ghosthacking.webcrow.jp/index.html
+https://hotpepar.blogspot.com/
 
 
 ＊sakura.portalsites
-メッセージフォーム
+連絡先
 https://goo.gl/forms/qJhnaKjUfVtcOWSk1
+
+
+＊sakura.portalsites
+-
+
+＊sakura.portalsites
+独立伺か研究施設 ばぐとら研究所
+http://ssp.shillest.net/
+
+
+＊sakura.portalsites
+Disc-2
+http://disc2.s56.xrea.com/
+
+
+＊sakura.portalsites
+伺か情報ブログ「ghost-log」
+https://ghost-log.net/
+
+
+＊sakura.portalsites
+ゴーストキャプターさくら
+http://buynowforsale.shillest.net/ghosts/
+
+
+＊sakura.portalsites
+ゴースト回覧板3rd
+http://jbbs.shitaraba.net/computer/44300/
+
+
+＊sakura.portalsites
+伺的な感想やレビューのWiki
+https://ghost-info.net/dokuwiki/doku.php
+
+
+＊sakura.portalsites
+噂と評判[改] 過去ログ保管庫+
+https://ghostreview.sakura.ne.jp/
+
 
 ＃────────
 ＃単語群
