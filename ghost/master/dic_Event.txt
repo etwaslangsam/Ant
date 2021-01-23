@@ -5,7 +5,7 @@
 ＄単語群「＊」の重複回避	直前、トーク中
 ＄さくらスクリプトによるスコープ切り換え時	
 ＄自動挿入ウェイトタイプ	一般
-＄会話時サーフェス戻し	無効
+＄会話時サーフェス戻し	有効
 ＄手動セーブ	実行
 
 ＊OnCacheSuspend
@@ -33,7 +33,24 @@
 ＃────────
 ＃■最小化解除
 ＃────────
+＊OnWindowStateMinimize
+＄手動セーブ	実行
+
 ＊OnWindowStateRestore
+＄手動セーブ	実行
+＞最小化解除
+
+＊最小化解除
+\1\s[14]ふう‥‥\w5\s[10]絹代、コレここに置いておくぞ。\n
+\0\s[6]よっと‥‥\w5\s[0]ありがとう、お疲れ様。\w5
+\s[5]じゃ、次は中身を出して並べておいてね。
+\1\s[14]少し休ませてくれ‥‥。\e
+
+＊最小化解除
+\0\s[33]ん～、休憩おわりっ！\n
+\1\s[13]（ユーザ名）がいるのに休憩してよかったんだろうか。\e
+
+＊最小化解除
 \0\s[3]（ユーザ名）さん？\w5
 急にぼーっとして、大丈夫ですか？
 \1\s[28]φ（ちょっと精をもらいすぎたかなφ）\e
@@ -55,9 +72,7 @@
 ＃────────
 ＊OnMinuteChange
 ＞重なり	（compare,1,（Reference2））
-
-＊OnHourTimeSignal
-＞（現在時）時	（時報フラグ）==１
+＞（現在時）時	（現在分）==０&&（時報フラグ）
 
 ＊１５時
 \0\s[5]おやつにミツツボアリは如何ですか～？\n
@@ -86,22 +101,8 @@
 ＃────────
 ＃■選択肢
 ＃────────
-＊OnChoiceSelectEx
-＞（Reference1）
-＞（Reference0）
-＞選択先なし
-
-＊OnChoiceSelect
-＞（Reference0）
-＞選択先なし
-
 ＊OnChoiceTimeout
 \0\s[3]（ユーザ名）さ～ん？ おーい？
-
-＊OnAnchorSelectEx
-＞（Reference1）
-＞（Reference0）
-＞選択先なし
 
 ＊OnAnchorSelect
 ＞（Reference0）
@@ -117,7 +118,7 @@
 ＃────────
 ＊OnSurfaceRestore
 ＞鎮まり給え	（Reference0）==50
-\0（choice,\s[6],\s[7],\s[32]）\1（choice,\s[16],\s[20],\s[26]）
+\0（choice,\s[6],\s[7],\s[32]）\1（choice,\s[16],\s[20],\s[26]）\e
 
 ＊鎮まり給え
 \1\s[28]あ～、そろそろ怒りを鎮めてくれ。
@@ -126,8 +127,11 @@
 ＃────────
 ＃■マウスイベント
 ＃────────
+＊OnMouseClick
+＞（Reference3）（Reference4）つつかれ	（Reference5）==0&&（is_empty,（Reference4））==0
+
 ＊OnMouseDoubleClick
-＞（Reference3）（Reference4）つつかれ
+＞（Reference3）つつかれ	（Reference5）==0&&（is_empty,（Reference4））
 
 ＊OnMouseWheel
 ＄ころころカウンタ=（ころころカウンタ）+1
@@ -394,3 +398,29 @@
 ＊rが押された
 ＄辞書リロード	実行
 ：\s[0]リロードしました。
+
+＃────────
+＃web拍手
+＃────────
+＊OnWebClap
+\![open,inputbox,拍手送信内容,,--limit=1000]
+\0\s[0]\cこちらのボックスにご記入ください。\e
+
+＊拍手送信内容を教えてもらった
+\![execute,http-post,http://clap.webclap.com/clap.php?id=teniwa,--param=message_body="絹代＠（拍手送信内容）",--async=webclap]
+＄拍手送信内容	
+
+＊拍手送信内容がからっぽ
+\0\s[8]キャンセルですね。\e
+
+＊OnExecuteHTTPComplete
+＞拍手送信完了	（Reference1）==webclap
+＊拍手送信完了
+\0\s[0]ご協力ありがとうございます。\w5
+今後のサービス向上の参考にさせていただきます。\e
+
+＊OnExecuteHTTPFailure
+＞拍手送信失敗	（Reference1）==webclap
+＊拍手送信失敗
+\0\s[4]ごめんなさい。
+「（Reference4）」という理由で送信に失敗しました。\e
