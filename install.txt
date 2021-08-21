@@ -3,4 +3,3 @@ name,HONEYÅ@POT
 type,ghost
 directory,Ant
 refresh,0
-robots,noindex
