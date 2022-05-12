@@ -1,0 +1,37 @@
+＠homeurl
+https://raw.githubusercontent.com/etwaslangsam/Ant/master/
+
+＃────────ネットワーク更新
+＊OnUpdateBegin
+\0\s[0]ネットワーク更新を開始しますね。\e
+
+＊OnUpdateReady
+\0\s[0]（Reference0）件の更新、っと。\e
+
+＊OnUpdateComplete
+＞更新なし	（compare,（Reference0）,none）
+\0\s[6]更新が完了しました。
+\1\s[20]お疲れさん。\e
+
+＊更新なし
+\0\s[32]更新はありませんでした。\e
+
+＊OnUpdateFailure
+＞更新（Reference0）
+\0\s[4]（Reference0）で失敗しました。\e
+
+＊更新timeout
+\0\s[4]タイムアウトしました。
+\1\s[13]時間をおいてからまた挑戦してみてくれ。\e
+
+＊更新md5 miss
+\0\s[4]MD5エラーです。
+\1\s[12]これは‥‥作者に報告だな。\e
+
+＊更新404
+\0\s[4]404‥‥？
+\1\s[12]サーバーが‥‥消えた？\e
+
+＊更新artificial
+\0\s[4]中断します。\e
+
