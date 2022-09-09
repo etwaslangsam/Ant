@@ -11,13 +11,21 @@ menu.background.bitmap.filename,background.png
 menu.foreground.bitmap.filename,foreground.png
 menu.sidebar.bitmap.filename,sidebar.png
 
-menu.background.font.color.r,255
-menu.background.font.color.g,244
-menu.background.font.color.b,244
+menu.background.font.color.r,51
+menu.background.font.color.g,51
+menu.background.font.color.b,51
 
-menu.foreground.font.color.r,0
-menu.foreground.font.color.g,0
-menu.foreground.font.color.b,0
+menu.foreground.font.color.r,255
+menu.foreground.font.color.g,247
+menu.foreground.font.color.b,204
+
+menu.frame.color.r,51
+menu.frame.color.g,51
+menu.frame.color.b,51
+
+menu.separator.color.r,51
+menu.separator.color.g,51
+menu.separator.color.b,51
 
 sakura.balloon.offsetx,40
 sakura.balloon.offsety,0
