@@ -8,7 +8,7 @@ version,1
 //\0//
 surface0-9,31-34
 {
-element0,overlay,surface10.png,0,0
+	element0,overlay,surface10.png,0,0
 }
 
 surface0
@@ -32,34 +32,51 @@ element1,overlay,surface11.png,0,0
 
 surface2
 {
-animation1.interval,rarely
-animation1.pattern0,overlay,62,90,0,0
-animation1.pattern1,overlay,61,90,0,0
-animation1.pattern2,overlay,-1,90,0,0
+	animation1.interval,rarely
+	animation1.pattern0,overlay,62,90,0,0
+	animation1.pattern1,overlay,61,90,0,0
+	animation1.pattern2,overlay,-1,90,0,0
 
-element1,overlay,surface12.png,0,0
+	element1,overlay,surface12.png,0,0
+
+	animation100.interval,runonce
+	animation100.pattern0,overlay,2070,0,120,0
+
 }
 
 surface3
 {
-animation1.interval,rarely
-animation1.pattern0,overlay,62,90,0,0
-animation1.pattern1,overlay,61,90,0,0
-animation1.pattern2,overlay,-1,90,0,0
+	animation1.interval,rarely
+	animation1.pattern0,overlay,62,90,0,0
+	animation1.pattern1,overlay,61,90,0,0
+	animation1.pattern2,overlay,-1,90,0,0
 
-element1,overlay,surface13.png,0,0
+	element1,overlay,surface13.png,0,0
+
+	animation101.interval,always
+	animation101.pattern0,overlay,2000,100,30,20
+	animation101.pattern1,overlay,2001,100,30,20
+	animation101.pattern2,overlay,2002,100,30,20
 }
 
 surface4
 {
 
-element1,overlay,surface14.png,0,0
+	element1,overlay,surface14.png,0,0
+
+	animation102.interval,runonce
+	animation102.pattern0,overlay,2050,100,150,-10
+	animation102.pattern1,overlay,2050,100,150,0
+	animation102.pattern2,overlay,2050,100,150,10
 }
 
 surface5
 {
 
-element1,overlay,surface15.png,0,0
+	element1,overlay,surface15.png,0,0
+
+	animation103.interval,runonce
+	animation103.pattern0,overlay,2030,0,40,30
 }
 
 surface6
@@ -71,17 +88,25 @@ element1,overlay,surface16.png,0,0
 surface7
 {
 
-element1,overlay,surface17.png,0,0
+	element1,overlay,surface17.png,0,0
+
+	animation106.interval,runonce
+	animation106.pattern0,overlay,2020,0,30,0
 }
 
 surface8
 {
-animation1.interval,rarely
-animation1.pattern0,overlay,62,90,0,0
-animation1.pattern1,overlay,61,90,0,0
-animation1.pattern2,overlay,-1,90,0,0
+	animation1.interval,rarely
+	animation1.pattern0,overlay,62,90,0,0
+	animation1.pattern1,overlay,61,90,0,0
+	animation1.pattern2,overlay,-1,90,0,0
 
-element1,overlay,surface18.png,0,0
+	element1,overlay,surface18.png,0,0
+
+	animation105.interval,runonce
+	animation105.pattern0,overlay,2010,100,80,120
+	animation105.pattern1,overlay,2010,100,70,130
+	animation105.pattern2,overlay,2010,100,60,140
 }
 
 surface9
@@ -122,12 +147,16 @@ element1,overlay,surface25.png,0,0
 
 surface34
 {
-animation1.interval,rarely
-animation1.pattern0,overlay,62,90,0,0
-animation1.pattern1,overlay,61,90,0,0
-animation1.pattern2,overlay,-1,90,0,0
+	animation1.interval,rarely
+	animation1.pattern0,overlay,62,90,0,0
+	animation1.pattern1,overlay,61,90,0,0
+	animation1.pattern2,overlay,-1,90,0,0
 
-element1,overlay,surface27.png,0,0
+	element1,overlay,surface27.png,0,0
+
+	animation104.interval,always
+	animation104.pattern0,overlay,2040,300,130,20
+	animation104.pattern1,overlay,2041,300,130,20
 }
 
 surface50
@@ -142,247 +171,10 @@ element0,overlay,surface50.png,0,0
 element1,overlay,surface51.png,0,0
 }
 
+//さわり判定//
 surface.append0-9,31-34
 {
-collision0,75,36,178,89,head
-collision1,91,174,167,215,bust
-collision2,51,398,213,420,skirt
-}
-
-//\1//
-surface10-24,26-28
-{
-element0,overlay,surface0.png,0,0
-}
-
-surface10
-{
-animation0.interval,rarely
-animation0.pattern0,overlay,101,70,0,0
-animation0.pattern1,overlay,100,70,0,0
-animation0.pattern2,overlay,-1,70,0,0
-
-
-}
-
-surface11
-{
-animation0.interval,rarely
-animation0.pattern0,overlay,101,70,0,0
-animation0.pattern1,overlay,100,70,0,0
-animation0.pattern2,overlay,-1,70,0,0
-
-element1,overlay,surface200.png,0,0
-element2,overlay,surface300.png,0,0
-element3,overlay,surface400.png,0,0
-}
-
-surface12
-{
-animation0.interval,rarely
-animation0.pattern0,overlay,101,70,0,0
-animation0.pattern1,overlay,100,70,0,0
-animation0.pattern2,overlay,-1,70,0,0
-
-element1,overlay,surface201.png,0,0
-element2,overlay,surface301.png,0,0
-}
-
-surface13
-{
-animation0.interval,rarely
-animation0.pattern0,overlay,101,70,0,0
-animation0.pattern1,overlay,100,70,0,0
-animation0.pattern2,overlay,-1,70,0,0
-
-element1,overlay,surface203.png,0,0
-element2,overlay,surface300.png,0,0
-}
-
-surface14
-{
-
-element1,overlay,surface101.png,0,0
-element2,overlay,surface200.png,0,0
-element3,overlay,surface300.png,0,0
-}
-
-surface15
-{
-
-element1,overlay,surface102.png,0,0
-element2,overlay,surface202.png,0,0
-}
-
-surface16
-{
-
-element1,overlay,surface101.png,0,0
-}
-
-surface17
-{
-animation0.interval,rarely
-animation0.pattern0,overlay,101,70,0,0
-animation0.pattern1,overlay,100,70,0,0
-animation0.pattern2,overlay,-1,70,0,0
-
-element1,overlay,surface203.png,0,0
-element2,overlay,surface302.png,0,0
-}
-
-surface18
-{
-animation0.interval,rarely
-animation0.pattern0,overlay,101,70,0,0
-animation0.pattern1,overlay,100,70,0,0
-animation0.pattern2,overlay,-1,70,0,0
-
-element1,overlay,surface204.png,0,0
-element2,overlay,surface300.png,0,0
-}
-
-surface19
-{
-animation0.interval,rarely
-animation0.pattern0,overlay,101,70,0,0
-animation0.pattern1,overlay,100,70,0,0
-animation0.pattern2,overlay,-1,70,0,0
-
-element1,overlay,surface201.png,0,0
-element2,overlay,surface302.png,0,0
-element3,overlay,surface400.png,0,0
-}
-
-surface20
-{
-animation0.interval,rarely
-animation0.pattern0,overlay,101,70,0,0
-animation0.pattern1,overlay,100,70,0,0
-animation0.pattern2,overlay,-1,70,0,0
-
-element1,overlay,surface204.png,0,0
-}
-
-surface21
-{
-animation0.interval,rarely
-animation0.pattern0,overlay,101,70,0,0
-animation0.pattern1,overlay,100,70,0,0
-animation0.pattern2,overlay,-1,70,0,0
-
-element1,overlay,surface204.png,0,0
-element2,overlay,surface400.png,0,0
-}
-
-surface22
-{
-animation0.interval,rarely
-animation0.pattern0,overlay,101,70,0,0
-animation0.pattern1,overlay,100,70,0,0
-animation0.pattern2,overlay,-1,70,0,0
-
-element1,overlay,surface200.png,0,0
-element2,overlay,surface301.png,0,0
-element3,overlay,surface400.png,0,0
-}
-
-surface23
-{
-animation0.interval,rarely
-animation0.pattern0,overlay,101,70,0,0
-animation0.pattern1,overlay,100,70,0,0
-animation0.pattern2,overlay,-1,70,0,0
-
-element1,overlay,surface200.png,0,0
-element2,overlay,surface300.png,0,0
-}
-
-surface24
-{
-
-element1,overlay,surface101.png,0,0
-element2,overlay,surface203.png,0,0
-element3,overlay,surface300.png,0,0
-}
-
-surface25
-{
-animation0.interval,rarely
-animation0.pattern0,overlay,104,70,0,0
-animation0.pattern1,overlay,103,70,0,0
-animation0.pattern2,overlay,-1,70,0,0
-element0,overlay,surface500.png,0,0
-element1,overlay,surface105.png,0,0
-element2,overlay,surface204.png,0,0
-}
-
-surface26
-{
-
-element1,overlay,surface101.png,0,0
-element2,overlay,surface202.png,0,0
-}
-
-surface27
-{
-animation0.interval,rarely
-animation0.pattern0,overlay,101,70,0,0
-animation0.pattern1,overlay,100,70,0,0
-animation0.pattern2,overlay,-1,70,0,0
-
-element1,overlay,surface205.png,0,0
-element2,overlay,surface302.png,0,0
-}
-
-surface28
-{
-
-element1,overlay,surface102.png,0,0
-element2,overlay,surface202.png,0,0
-element3,overlay,surface300.png,0,0
-}
-
-surface29
-{
-animation0.interval,rarely
-animation0.pattern0,overlay,101,70,0,0
-animation0.pattern1,overlay,100,70,0,0
-animation0.pattern2,overlay,-1,70,0,0
-element0,overlay,surface500.png,0,0
-element1,overlay,surface201.png,0,0
-element2,overlay,surface302.png,0,0
-element3,overlay,surface400.png,0,0
-}
-
-surface52
-{
-animation0.interval,rarely
-animation0.pattern0,overlay,101,70,0,0
-animation0.pattern1,overlay,100,70,0,0
-animation0.pattern2,overlay,-1,70,0,0
-element0,overlay,surface1000.png,0,0
-element1,overlay,surface203.png,0,0
-element2,overlay,surface302.png,0,0
-}
-
-surface53
-{
-animation0.interval,rarely
-animation0.pattern0,overlay,104,70,0,0
-animation0.pattern1,overlay,103,70,0,0
-animation0.pattern2,overlay,-1,70,0,0
-element0,overlay,surface1500.png,0,0
-element1,overlay,surface105.png,0,0
-element2,overlay,surface204.png,0,0
-}
-
-surface.append10-29,52,53
-{
-collisionex0,Head,rect,96,33,189,77
-collisionex1,Antena,rect,103,7,171,33
-collisionex2,Bust,polygon,117,162,138,163,149,179,155,166,187,163,190,189,179,204,147,204,115,206,107,187
-collisionex3,Skirt,rect,92,357,212,393
-collisionex4,Leg,rect,97,394,206,420
-collisionex5,Tanima,polygon,139,162,153,164,150,177
+	collision0,75,36,178,89,head
+	collision1,91,174,167,215,bust
+	collision2,51,398,213,420,skirt
 }
