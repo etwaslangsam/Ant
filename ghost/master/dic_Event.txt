@@ -335,36 +335,14 @@
 ＞（Reference0）が押された
 
 ＊tが押された
-（）
+＞PleaseTalk
 
 ＊rが押された
 ＄辞書リロード	実行
 ：\s[0]リロードしました。
 
-
-＃────────web拍手
-＊OnWebClap
-\![open,inputbox,拍手送信内容,,--limit=1000]
-\0\s[0]\cこちらのボックスにご記入ください。\e
-
-＊拍手送信内容を教えてもらった
-\![execute,http-post,http://clap.webclap.com/clap.php?id=teniwa,--param=message_body="絹代＠（拍手送信内容）",--async=webclap]
-＄拍手送信内容	
-
-＊拍手送信内容がからっぽ
-\0\s[8]キャンセルですね。\e
-
-＊OnExecuteHTTPComplete
-＞拍手送信完了	（Reference1）==webclap
-＊拍手送信完了
-\0\s[0]ご協力ありがとうございます。\w5
-今後のサービス向上の参考にさせていただきます。\e
-
-＊OnExecuteHTTPFailure
-＞拍手送信失敗	（Reference1）==webclap
-＊拍手送信失敗
-\0\s[4]ごめんなさい。
-「（Reference4）」という理由で送信に失敗しました。\e
-
-
-
+＃────────
+＊OnTalk
+＞（Reference1）	（Reference0）
+＄話記憶1	（）
+（話記憶1）

@@ -1,0 +1,42 @@
+＃────────webclap
+＊WebClapModoki
+\![open,inputbox,WEB拍手もどき入力,--timeout=-1,--text=いいね！,--limit=800]
+\0\s[0]\cこちらのボックスにご記入ください。\e
+
+＠WCM_URL
+https://script.google.com/macros/s/AKfycbxHT6cacuEsMdGulS0c_a29X1pjDu5CUC3BPqAd9_wwskSn9l1oAAaN216XusA9siAX/exec
+＠送信元
+HONEY POT
+
+＊WEB拍手もどき入力を入力された
+＄送信内容	（Reference1）
+＄メモ	手動
+\0\_q（送信内容）\_q
+\1（この内容で送信します）
+\_q
+\![*]\q[送信する,SendClap] \![*]\q[やめる,拍手キャンセル]
+\_q\e
+
+＊SendClap
+\![execute,http-post,（WCM_URL）,--param=message_body="（送信元）;（送信内容）;（メモ）",--async=webclap,--timeout=5]
+＃\![execute,http-post,（wcm）,--param=message_body="らきあ＠（拍手送信内容）",--async=webclap]
+＄拍手送信内容	
+
+＊拍手キャンセル
+＄拍手送信内容	
+\0\s[8]キャンセルですね。\e
+
+＊OnExecuteHTTPComplete
+＞拍手送信完了		（count,（Reference1）,webclap）
+
+＊拍手送信完了
+＄回数_拍手送信=（回数_拍手送信）+１
+\0\s[0]ご協力ありがとうございます。\w5
+今後のサービス向上の参考にさせていただきます。\e
+
+＊OnExecuteHTTPFailure
+＞拍手送信失敗		（count,（Reference1）,webclap）
+
+＊拍手送信失敗
+\0\s[4]ごめんなさい。
+「（Reference4）」という理由で送信に失敗しました。\e
